@@ -15,5 +15,36 @@ body{
     height: 100vh;
     background-image: url(images/background.png);
     background-size: cover;
-    background-position: 100%;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #000;
 }
