@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predrag Milanović</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/20accec5c5.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 <div id="header">
     <div class="container">
@@ -26,7 +29,9 @@
         </div>
     </div>
 </div>
-<!-- about-->
+
+<!-- About-->
+
 <div id="About">
     <div class="container">
         <div class="row">
@@ -35,13 +40,13 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p></p>
+                <p>...</p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
                 </div>
-                <div class="tab-contents">
+                <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span>CAD Modeling/Designing</span><br>Modeling/Designing in AutoCad, Inventor, Fusion 360 and 3ds Max</li>
                         <li><span>Mechanical Engineering</span><br>Designing, analyzing, and improving machines, systems, 
@@ -51,9 +56,87 @@
                         <li><span>3D Printing</span><br>Creating three-dimensional objects with complex geometries from a digital design</li>
                     </ul>
                 </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Present</span><br>
+                            <b>HANSA-PARK Freizeit- und Familienpark GmbH & Co. KG</b><br>Technical Maintenance Staff
+                        </li>
+                        <li><span>2021 - Present</span><br>
+                            <b>Rewave Studios</b><br>CEO
+                        </li>
+                        <li><span>2019 - 2022</span><br>
+                            Helping Technical Maintenance Staff and Ride Operator across various most famous German
+                            amusement parks like Studio 100 Media's <b>Holiday Park</b>, EVENT PARK's <b>Belantis - Das ArbenteuerReich</b>,
+                            and <b>Karls Erlebnis-Dorf</b> from Karls Tourismus GmbH.
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 - Present</span><br>
+                            Pan-European University “Apeiron”, <b>Faculty of Information Technology</b>, Banja Luka, Bosnia and Herzegovina<br>
+                            Degree: <i>M.Sc. IT</i>
+                        </li>
+                        <li><span>2021</span><br>
+                            University in Banja Luka, <b>Faculty of Mechanical Engineering</b>, Banja Luka, Bosnia and Herzegovina<br>
+                            Degree: <i>B.Sc. Mechanical Engineering</i>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Services -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>CAD Modeling/Designing</h2>
+                <p>...</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Mechanical Engineering</h2>
+                <p>...</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Mechanic</h2>
+                <p>...</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>3D Printing</h2>
+                <p>...</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio--> 
+
+<!-- Contact -->
+
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(event, tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link"); //displaying the titles
+        document.getElementById(tabname).classList.add("active-tab"); //displaying the content
+    }
+</script>
+
 </body>
 </html>
