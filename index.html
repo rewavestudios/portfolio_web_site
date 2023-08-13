@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predrag Milanović</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/20accec5c5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo">
+            <img src="source/img/logo.png" class="logo">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -36,7 +35,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/user.jpg">
+                <img src="source/img/user.jpg">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -94,24 +93,28 @@
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
             <div>
-                <h2>CAD Modeling/Designing</h2>
+                <img src="source/icon/3d_modeling.png" alt="CAD Modeling icon">
+                <h2>CAD Modeling / Designing</h2>
                 <p>...</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
             <div>
+                <img src="source/icon/mechanical_engineering.png" alt="Mechanical Engineering icon">
                 <h2>Mechanical Engineering</h2>
                 <p>...</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
             <div>
+                <img src="source/icon/mechanic.png" alt="Mechanic icon">
                 <h2>Mechanic</h2>
                 <p>...</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
             <div>
+                <img src="source/icon/3d_printing.png" alt="3D Printing icon">
                 <h2>3D Printing</h2>
                 <p>...</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
         </div>
     </div>
@@ -119,24 +122,38 @@
 
 <!-- Portfolio--> 
 
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="source/img/rollercoaster_work.png">
+                <div class="layer">
+                    <h3>...</h3>
+                    <a href="#"><img src="source/img/external_link.png"></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="source/img/technical_drawing.jpg">
+                <div class="layer">
+                    <h3>...</h3>
+                    <a href="#"><img src="source/img/external_link.png"></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="source/img/3d_printer.png">
+                <div class="layer">
+                    <h3>...</h3>
+                    <a href="#"><img src="source/img/external_link.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Contact -->
 
-<script>
-    var tablinks= document.getElementsByClassName("tab-links");
-    var tabcontents= document.getElementsByClassName("tab-contents");
-
-    function opentab(event, tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-
-        event.currentTarget.classList.add("active-link"); //displaying the titles
-        document.getElementById(tabname).classList.add("active-tab"); //displaying the content
-    }
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>
