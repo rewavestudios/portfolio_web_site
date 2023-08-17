@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: #080808;
     color:#fff ;
@@ -13,7 +16,7 @@ body{
 #header{
     width :100%;
     height: 100vh;
-    background-image: url(source/img/background.png);
+    background-image: url(../source/img/background.png);
     background-size:cover;
     background-position: center;
 }
@@ -140,7 +143,7 @@ nav ul li a:hover::after{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
-    text-shadow: -1px -1px 0 #ababab, 1px -1px 0 #ababab, -1px 1px 0 #ababab, 1px 1px 0 #ababab;
+    /*text-shadow: -1px -1px 0 #ababab, 1px -1px 0 #ababab, -1px 1px 0 #ababab, 1px 1px 0 #ababab;*/
 }
 .services-list div{
     background: #fff700;
@@ -313,6 +316,13 @@ form .submit{
     cursor: pointer;
 }
 
+/*Contact Message*/
+#msg{
+    color: #ababab;
+    margin-top: -40px;
+    display: block;
+}
+
 /*copyright*/
 .copyright{
     width: 100%;
@@ -325,6 +335,9 @@ form .submit{
 .copyright-icon{
     width: 0.75%;
 }
+.copyright p a{
+    color: #fff;
+}
 
 /* CSS for small screens*/
 nav .menu{
@@ -335,7 +348,6 @@ nav .menu{
 }
 
 @media only screen and (max-width:600px){
-
 /*Header*/
     #header{
         background-image: url(source/img/phone_background.png);
@@ -408,6 +420,5 @@ nav .menu{
     .copyright-icon{
         width: 2.75%;
     }
-}
     
-
+}
