@@ -14,13 +14,15 @@
     <div class="container">
         <nav>
             <img src="source/img/rewave-studios_logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
+                <img src="source/icon/close-menu_icon.png" onclick="closemenu()"class="menu">
             </ul>
+            <img src="source/icon/menu_icon.png" onclick="openmenu()" class="menu">
         </nav>
         <div class="header-text">
             <p>B.Sc. Mechanical Engineering</p>
@@ -30,7 +32,6 @@
 </div>
 
 <!-- About-->
-
 <div id="About">
     <div class="container">
         <div class="row">
@@ -78,7 +79,7 @@
                         </li>
                         <li><span>2021</span><br>
                             University in Banja Luka, <b>Faculty of Mechanical Engineering</b>, Banja Luka, Bosnia and Herzegovina<br>
-                            Degree: <i>B.Sc. Mechanical Engineering</i>
+                            Degree: <i>B.Eng. Mechanical Engineering</i>
                     </ul>
                 </div>
             </div>
@@ -87,7 +88,6 @@
 </div>
 
 <!-- Services -->
-
 <div id="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
@@ -121,7 +121,6 @@
 </div>
 
 <!-- Portfolio--> 
-
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
@@ -156,7 +155,6 @@
 </div>
 
 <!-- Contact -->
-
 <div id="contact">
     <div class="container">
         <div class="row">
@@ -181,12 +179,17 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Copyright -->
+<div id="copyright">
     <div class="copyright">
-        <p><img src="source/icon/rewave-studios_icon.png" class="copyright-icon"> ©2023 Rewave Studios.
-            <br>All tradedemarks referenced herein are the properties of their respective owners.
-        </p>
+            <p><img src="source/icon/rewave-studios_icon.png" class="copyright-icon"> ©2023 Rewave Studios.
+                <br>All tradedemarks referenced herein are the properties of their respective owners.
+            </p>
     </div>
 </div>
+
 
 <script src="app.js"></script>
 
