@@ -335,6 +335,9 @@ form .submit{
 .copyright-icon{
     width: 0.75%;
 }
+.copyright p a{
+    color: #fff;
+}
 
 /* CSS for small screens*/
 nav .menu{
@@ -345,7 +348,6 @@ nav .menu{
 }
 
 @media only screen and (max-width:600px){
-
 /*Header*/
     #header{
         background-image: url(source/img/phone_background.png);
@@ -418,6 +420,5 @@ nav .menu{
     .copyright-icon{
         width: 2.75%;
     }
-}
     
-
+}
