@@ -12,3 +12,12 @@ var tabcontents= document.getElementsByClassName("tab-contents");
         event.currentTarget.classList.add("active-link"); //displaying the titles
         document.getElementById(tabname).classList.add("active-tab"); //displaying the content
     }
+
+    var sidemenu= document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
