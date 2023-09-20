@@ -12,6 +12,7 @@ body{
     color:#fff ;
 }
 
+
 /*Header*/
 #header{
     width :100%;
@@ -69,6 +70,7 @@ nav ul li a:hover::after{
     color:#fff700
 }
 
+
 /*About*/
 #About{
     padding: 80px 0;
@@ -116,7 +118,7 @@ nav ul li a:hover::after{
     bottom: -8px;
     transition: 0.5s;
 }
-.tab-links.active-link::after{
+.tab-links.active-link:after{
     width: 50%;
 }
 .tab-contents ul li{
@@ -133,6 +135,7 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+
 
 /*Services*/
 #services{
@@ -175,6 +178,7 @@ nav ul li a:hover::after{
     background: #ababab;
     transform: translateY(-10px);
 }
+
 
 /*Portfolio*/
 #portfolio{
@@ -245,7 +249,6 @@ nav ul li a:hover::after{
     transition: background 0.5s, color 0.5s;
     color:#fff;
 }
-
 .btn:hover{
     background: #fff700;
     color: #ababab;
@@ -269,6 +272,7 @@ nav ul li a:hover::after{
 .contact-left p img{
     margin-right: 15px;
     width: 5%;
+    vertical-align: middle;
 }
 /*contact me - social media - icons*/
 .social-icons {
@@ -316,6 +320,7 @@ form .submit{
     cursor: pointer;
 }
 
+
 /*Contact Message*/
 #msg{
     color: #ababab;
@@ -323,20 +328,106 @@ form .submit{
     display: block;
 }
 
+
+/*Language*/
+.lang-menu{
+    padding: 5px;
+    position: relative;
+    margin: 0 auto;
+    width:fit-content;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.selected-lang{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2.1;
+    width: 95px;
+}
+.selected-lang:before{
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../source/lang/united-states.png);
+}
+.lang-menu ul{
+    margin: 0;
+    padding: 0;
+    background-color: #ababab;
+    border: 2px solid #fff700;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: -120px;
+    left: 105px;
+}
+.lang-menu ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.lang-menu ul li a{
+    width: 135px;
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+.lang-menu ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align:middle;
+    margin-right: 10px;
+    background-image: url(../source/lang/united-states.png);
+}
+.lang-menu ul li a:hover{
+    background-color: #fff700;
+    color: rgb(0, 0, 0);
+}
+.lang-menu ul li a.de:before{
+    background-image: url(../source/lang/germany.png);
+}
+.lang-menu ul li a.sr:before{
+    background-image: url(../source/lang/serbia.png);
+}
+.lang-menu ul li a.en:before{
+    background-image: url(../source/lang/united-states.png);       
+}
+.lang-menu ul li a.af:before{
+    background-image: url(../source/lang/south-africa.png);
+}
+.lang-menu:hover ul{
+    display: block;
+}
+
 /*copyright*/
 .copyright{
     width: 100%;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px;
     background: #ababab;
     font-weight: 300;
-    margin-top: 20px;
 }
 .copyright-icon{
-    width: 0.75%;
+    width: 15%;
 }
 .copyright p a{
     color: #fff;
+}
+.copyright-links{
+    margin-top: 5px;
+    font-size: 10px;
+    word-spacing: 10px;
+}
+.copyright-links a{
+    text-decoration-line: none;
 }
 
 /* CSS for small screens*/
@@ -350,7 +441,7 @@ nav .menu{
 @media only screen and (max-width:600px){
 /*Header*/
     #header{
-        background-image: url(source/img/phone_background.png);
+        background-image: url(../source/img/phone_background.png);
     }
     .header-text{
         margin-top: 180%;
@@ -413,12 +504,22 @@ nav .menu{
         width: 10%;
     }
 
+/*Language*/
+    .lang-menu{
+        padding: 0 37%;
+    }
+    .lang-menu ul{
+        top: -120px;
+        left: 220px;
+    }
 /*Copyright*/
     .copyright{
         font-size: 14px;
     }
     .copyright-icon{
-        width: 2.75%;
+        width: 20%;
     }
-    
+    .copyright-links{
+        word-spacing: 5px;
+    }
 }
